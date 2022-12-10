@@ -1,0 +1,60 @@
+{
+  "name": "oci-metrics-datasource",
+  "private": true,
+  "version": "3.0.6",
+  "description": "Oracle Cloud Infrastructure Metrics Data Source for Grafana",
+  "main": "index.js",
+  "scripts": {
+    "buildjs": "./node_modules/.bin/grunt",
+    "lint": "./node_modules/.bin/eslint src/",
+    "fix": "./node_modules/.bin/eslint --fix src/",
+    "bump": "./node_modules/.bin/grunt bump",
+    "test": "jest src/ --coverage",
+    "gBuild": "yarn install --pure-lockfile && yarn buildjs  && zip ${npm_package_name}-${npm_package_version}.zip ./dist -r"
+  },
+  "author": "",
+  "license": "UPL-1.0",
+  "engines": {
+    "node": ">6.10.0"
+  },
+  "engineStrict": true,
+  "devDependencies": {
+    "@grafana/runtime": "7.5",
+    "babel": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "grunt": "^1.5.3",
+    "grunt-babel": "~6.0.0",
+    "grunt-bump": "^0.8.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-execute": "~0.2.2",
+    "grunt-systemjs-builder": "^1.0.0",
+    "jest": "^24.5.0",
+    "jsdom": "~9.12.0",
+    "load-grunt-tasks": "^3.5.2",
+    "prunk": "^1.3.0",
+    "q": "^1.5.0"
+  },
+  "dependencies": {
+    "@apache-arrow/es5-cjs": "^4.0.1",
+    "@babel/preset-env": "^7.3.4",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-es2015-for-of": "^6.6.0",
+    "babel-plugin-transform-es2015-modules-systemjs": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^5.12.0",
+    "eslint-config-standard": "^12.0.0",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.21"
+  },
+  "resolutions": {
+    "d3-color": "3.1.0"
+  }
+}
